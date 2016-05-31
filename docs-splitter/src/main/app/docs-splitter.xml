@@ -1,0 +1,100 @@
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:json="http://www.mulesoft.org/schema/mule/json"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-current.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+
+	<spring:beans>
+		<spring:bean id="MyDerbyDBBean" name="AmericanDerbyDBBean"
+			class="com.mulesoft.training.db.MyDerbyDB" />
+	</spring:beans>
+
+
+	<!-- load props into registry for access through mel -->
+	<spring:beans>
+		<spring:bean id="appProps2"
+			class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+			<spring:property name="singleton" value="true" />
+			<spring:property name="location"
+				value="common.properties" />
+		</spring:bean>
+	</spring:beans>
+
+	<!-- turns maps into 'prittified' json -->
+	<json:object-to-json-transformer name="hashMapToJson"
+		mapper-ref="ObjectMapperPretty" doc:name="Object to JSON" />
+	<spring:beans>
+		<spring:bean id="Bean2" name="ObjectMapperPretty"
+			class="com.mulesoft.training.ObjectMapperPretty" scope="singleton" />
+	</spring:beans>
+
+
+	<db:derby-config name="MyDerbyDBConfig" url="${jdbc.derby.client.url}"
+		doc:name="Derby Configuration"
+		doc:description="jdbc:derby:memory:training;create=true
+
+creates a new in memory DB. This allows the Test Connection to work. 
+
+The Spring Bean will already create the database before this is called. This should generate a warning that the DB already exists. " />
+
+
+
+	<db:template-query name="insert_into_current"
+		doc:name="Template Query">
+		<db:parameterized-query><![CDATA[INSERT INTO current("name", "date", "bookvalue") VALUES(:name,:date,:bookvalue);]]></db:parameterized-query>
+		<db:in-param name="name" defaultValue="#[xpath3('//Name').text]" />
+		<db:in-param name="date" type="DATE"
+			defaultValue="#[xpath3('//LastTradeDate').text]" />
+		<db:in-param name="bookvalue" defaultValue="#[xpath3('//BookValue').text])" />
+	</db:template-query>
+
+	<http:listener-config name="HTTP_Listener_Configuration"
+		host="localhost" port="8081" doc:name="HTTP Listener Configuration" />
+	<http:request-config name="HTTP_Request_Configuration"
+		host="query.yahooapis.com" basePath="v1/public/yql" doc:name="HTTP Request Configuration" />
+	<context:property-placeholder location="common.properties" />
+
+	<flow name="financeapiFlow1">
+		<http:listener config-ref="HTTP_Listener_Configuration"
+			path="/" doc:name="HTTP" />
+		<http:request config-ref="HTTP_Request_Configuration"
+			port="80" path="/" method="GET" doc:name="HTTP">
+			<http:request-builder>
+				<http:query-param paramName="q"
+					value="#[message.inboundProperties.'http.query.params'.q]" />
+				<http:query-param paramName="env"
+					value="#[message.inboundProperties.'http.query.params'.env]" />
+				<http:query-param paramName="format"
+					value="#[message.inboundProperties.'http.query.params'.format]" />
+			</http:request-builder>
+		</http:request>
+		<logger level="INFO" doc:name="Logger" />
+
+		<byte-array-to-string-transformer
+			doc:name="Byte Array to String" />
+        <dw:transform-message doc:name="Transform Message">
+            <dw:input-payload doc:sample="sample_data/empty.xml"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+payload.query.results]]></dw:set-payload>
+            <dw:set-variable variableName="results"><![CDATA[%dw 1.0
+%output application/java
+---
+payload.query.results]]></dw:set-variable>
+        </dw:transform-message>
+		<splitter expression="#[message.payload" doc:name="Splitter" />
+		<db:insert config-ref="MyDerbyDBConfig" doc:name="Database">
+			<db:dynamic-query><![CDATA[INSERT INTO mystock("name", "date", "bookvalue") VALUES(#[xpath3('//Name').text], #[xpath3('//LastTradeDate').text], #[xpath3('//BookValue').text]);]]></db:dynamic-query>
+		</db:insert>
+	</flow>
+</mule>

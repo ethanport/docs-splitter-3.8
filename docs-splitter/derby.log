@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue May 31 15:15:22 PDT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0155-08e2-b2c2-0000117fe418 
+on database directory memory:/Users/ethan.port/AnypointStudioWorspaces/2016-03-02-ESBOpsTests/docs-splitter/training with class loader org.mule.module.launcher.MuleApplicationClassLoader[docs-splitter]@29a33620 
+Loaded from file:/Users/ethan.port/AnypointStudioWorspaces/2016-03-02-ESBOpsTests/.mule/apps/docs-splitter/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_51-b16
+user.dir=/Users/ethan.port/AnypointStudioWorspaces/2016-03-02-ESBOpsTests/docs-splitter
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.11.4
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
