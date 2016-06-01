@@ -1,3 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" yahoo:count="1" yahoo:created="2016-05-31T22:08:04Z" yahoo:lang="en-US"><results><quote symbol="BAC"><Ask>14.96</Ask><AverageDailyVolume>97748896</AverageDailyVolume><Bid>14.95</Bid><AskRealtime/><BidRealtime/><BookValue>23.12</BookValue><Change_PercentChange>+0.18 - +1.22%</Change_PercentChange><Change>+0.18</Change><Commission/><Currency>USD</Currency><ChangeRealtime/><AfterHoursChangeRealtime/><DividendShare>0.20</DividendShare><LastTradeDate>5/27/2016</LastTradeDate><TradeDate/><EarningsShare>1.27</EarningsShare><ErrorIndicationreturnedforsymbolchangedinvalid/><EPSEstimateCurrentYear>1.32</EPSEstimateCurrentYear><EPSEstimateNextYear>1.58</EPSEstimateNextYear><EPSEstimateNextQuarter>0.35</EPSEstimateNextQuarter><DaysLow>14.69</DaysLow><DaysHigh>14.88</DaysHigh><YearLow>10.99</YearLow><YearHigh>18.48</YearHigh><HoldingsGainPercent/><AnnualizedGain/><HoldingsGain/><HoldingsGainPercentRealtime/><HoldingsGainRealtime/><MoreInfo/><OrderBookRealtime/><MarketCapitalization>156.48B</MarketCapitalization><MarketCapRealtime/><EBITDA>0.00</EBITDA><ChangeFromYearLow>3.89</ChangeFromYearLow><PercentChangeFromYearLow>+35.40%</PercentChangeFromYearLow><LastTradeRealtimeWithTime/><ChangePercentRealtime/><ChangeFromYearHigh>-3.60</ChangeFromYearHigh><PercebtChangeFromYearHigh>-19.48%</PercebtChangeFromYearHigh><LastTradeWithTime>4:01pm - &lt;b&gt;14.88&lt;/b&gt;</LastTradeWithTime><LastTradePriceOnly>14.88</LastTradePriceOnly><HighLimit/><LowLimit/><DaysRange>14.69 - 14.88</DaysRange><DaysRangeRealtime/><FiftydayMovingAverage>14.28</FiftydayMovingAverage><TwoHundreddayMovingAverage>14.74</TwoHundreddayMovingAverage><ChangeFromTwoHundreddayMovingAverage>0.14</ChangeFromTwoHundreddayMovingAverage><PercentChangeFromTwoHundreddayMovingAverage>+0.98%</PercentChangeFromTwoHundreddayMovingAverage><ChangeFromFiftydayMovingAverage>0.60</ChangeFromFiftydayMovingAverage><PercentChangeFromFiftydayMovingAverage>+4.17%</PercentChangeFromFiftydayMovingAverage><Name>Bank of America Corporation Com</Name><Notes/><Open>14.76</Open><PreviousClose>14.70</PreviousClose><PricePaid/><ChangeinPercent>+1.22%</ChangeinPercent><PriceSales>1.99</PriceSales><PriceBook>0.64</PriceBook><ExDividendDate>3/2/2016</ExDividendDate><PERatio>11.70</PERatio><DividendPayDate>3/25/2016</DividendPayDate><PERatioRealtime/><PEGRatio>1.52</PEGRatio><PriceEPSEstimateCurrentYear>11.27</PriceEPSEstimateCurrentYear><PriceEPSEstimateNextYear>9.42</PriceEPSEstimateNextYear><Symbol>BAC</Symbol><SharesOwned/><ShortRatio>0.78</ShortRatio><LastTradeTime>4:01pm</LastTradeTime><TickerTrend/><OneyrTargetPrice>17.37</OneyrTargetPrice><Volume>62561801</Volume><HoldingsValue/><HoldingsValueRealtime/><YearRange>10.99 - 18.48</YearRange><DaysValueChange/><DaysValueChangeRealtime/><StockExchange>NYQ</StockExchange><DividendYield>1.34</DividendYield><PercentChange>+1.22%</PercentChange></quote></results></query><!-- total: 21 -->
-<!-- main-6df28a7d-1dfa-11e6-b981-e83935aedd3a -->
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng" yahoo:count="2" yahoo:created="2016-05-31T22:38:30Z" yahoo:lang="en-US">
+  <results>
+    <quote symbol="BAC">
+      <Ask>14.96</Ask>
+      <AverageDailyVolume>97748896</AverageDailyVolume>
+      <Bid>14.95</Bid>
+      <AskRealtime></AskRealtime>
+      <BidRealtime></BidRealtime>
+      <BookValue>23.12</BookValue>
+      <Change_PercentChange>+0.18 - +1.22%</Change_PercentChange>
+      <Change>+0.18</Change>
+      <Commission></Commission>
+      <Currency>USD</Currency>
+      <ChangeRealtime></ChangeRealtime>
+      <AfterHoursChangeRealtime></AfterHoursChangeRealtime>
+      <DividendShare>0.20</DividendShare>
+      <LastTradeDate>5/27/2016</LastTradeDate>
+      <TradeDate></TradeDate>
+      <EarningsShare>1.27</EarningsShare>
+      <ErrorIndicationreturnedforsymbolchangedinvalid></ErrorIndicationreturnedforsymbolchangedinvalid>
+      <EPSEstimateCurrentYear>1.32</EPSEstimateCurrentYear>
+      <EPSEstimateNextYear>1.58</EPSEstimateNextYear>
+      <EPSEstimateNextQuarter>0.35</EPSEstimateNextQuarter>
+      <DaysLow>14.69</DaysLow>
+      <DaysHigh>14.88</DaysHigh>
+      <YearLow>10.99</YearLow>
+      <YearHigh>18.48</YearHigh>
+      <HoldingsGainPercent></HoldingsGainPercent>
+      <AnnualizedGain></AnnualizedGain>
+      <HoldingsGain></HoldingsGain>
+      <HoldingsGainPercentRealtime></HoldingsGainPercentRealtime>
+      <HoldingsGainRealtime></HoldingsGainRealtime>
+      <MoreInfo></MoreInfo>
+      <OrderBookRealtime></OrderBookRealtime>
+      <MarketCapitalization>156.48B</MarketCapitalization>
+      <MarketCapRealtime></MarketCapRealtime>
+      <EBITDA>0.00</EBITDA>
+      <ChangeFromYearLow>3.89</ChangeFromYearLow>
+      <PercentChangeFromYearLow>+35.40%</PercentChangeFromYearLow>
+      <LastTradeRealtimeWithTime></LastTradeRealtimeWithTime>
+      <ChangePercentRealtime></ChangePercentRealtime>
+      <ChangeFromYearHigh>-3.60</ChangeFromYearHigh>
+      <PercebtChangeFromYearHigh>-19.48%</PercebtChangeFromYearHigh>
+      <LastTradeWithTime>4:01pm - &lt;b>14.88&lt;/b></LastTradeWithTime>
+      <LastTradePriceOnly>14.88</LastTradePriceOnly>
+      <HighLimit></HighLimit>
+      <LowLimit></LowLimit>
+      <DaysRange>14.69 - 14.88</DaysRange>
+      <DaysRangeRealtime></DaysRangeRealtime>
+      <FiftydayMovingAverage>14.28</FiftydayMovingAverage>
+      <TwoHundreddayMovingAverage>14.74</TwoHundreddayMovingAverage>
+      <ChangeFromTwoHundreddayMovingAverage>0.14</ChangeFromTwoHundreddayMovingAverage>
+      <PercentChangeFromTwoHundreddayMovingAverage>+0.98%</PercentChangeFromTwoHundreddayMovingAverage>
+      <ChangeFromFiftydayMovingAverage>0.60</ChangeFromFiftydayMovingAverage>
+      <PercentChangeFromFiftydayMovingAverage>+4.17%</PercentChangeFromFiftydayMovingAverage>
+      <Name>Bank of America Corporation Com</Name>
+      <Notes></Notes>
+      <Open>14.76</Open>
+      <PreviousClose>14.70</PreviousClose>
+      <PricePaid></PricePaid>
+      <ChangeinPercent>+1.22%</ChangeinPercent>
+      <PriceSales>1.99</PriceSales>
+      <PriceBook>0.64</PriceBook>
+      <ExDividendDate>3/2/2016</ExDividendDate>
+      <PERatio>11.70</PERatio>
+      <DividendPayDate>3/25/2016</DividendPayDate>
+      <PERatioRealtime></PERatioRealtime>
+      <PEGRatio>1.52</PEGRatio>
+      <PriceEPSEstimateCurrentYear>11.27</PriceEPSEstimateCurrentYear>
+      <PriceEPSEstimateNextYear>9.42</PriceEPSEstimateNextYear>
+      <Symbol>BAC</Symbol>
+      <SharesOwned></SharesOwned>
+      <ShortRatio>0.78</ShortRatio>
+      <LastTradeTime>4:01pm</LastTradeTime>
+      <TickerTrend></TickerTrend>
+      <OneyrTargetPrice>17.37</OneyrTargetPrice>
+      <Volume>62561801</Volume>
+      <HoldingsValue></HoldingsValue>
+      <HoldingsValueRealtime></HoldingsValueRealtime>
+      <YearRange>10.99 - 18.48</YearRange>
+      <DaysValueChange></DaysValueChange>
+      <DaysValueChangeRealtime></DaysValueChangeRealtime>
+      <StockExchange>NYQ</StockExchange>
+      <DividendYield>1.34</DividendYield>
+      <PercentChange>+1.22%</PercentChange>
+    </quote>
+
+
+
+<quote symbol="ABC"><Ask>14.96</Ask><AverageDailyVolume>97748896</AverageDailyVolume><Bid>14.95</Bid><AskRealtime/><BidRealtime/><BookValue>23.12</BookValue><Change_PercentChange>+0.18 - +1.22%</Change_PercentChange><Change>+0.18</Change><Commission/><Currency>USD</Currency><ChangeRealtime/><AfterHoursChangeRealtime/><DividendShare>0.20</DividendShare><LastTradeDate>5/27/2016</LastTradeDate><TradeDate/><EarningsShare>1.27</EarningsShare><ErrorIndicationreturnedforsymbolchangedinvalid/><EPSEstimateCurrentYear>1.32</EPSEstimateCurrentYear><EPSEstimateNextYear>1.58</EPSEstimateNextYear><EPSEstimateNextQuarter>0.35</EPSEstimateNextQuarter><DaysLow>14.69</DaysLow><DaysHigh>14.88</DaysHigh><YearLow>10.99</YearLow><YearHigh>18.48</YearHigh><HoldingsGainPercent/><AnnualizedGain/><HoldingsGain/><HoldingsGainPercentRealtime/><HoldingsGainRealtime/><MoreInfo/><OrderBookRealtime/><MarketCapitalization>156.48B</MarketCapitalization><MarketCapRealtime/><EBITDA>0.00</EBITDA><ChangeFromYearLow>3.89</ChangeFromYearLow><PercentChangeFromYearLow>+35.40%</PercentChangeFromYearLow><LastTradeRealtimeWithTime/><ChangePercentRealtime/><ChangeFromYearHigh>-3.60</ChangeFromYearHigh><PercebtChangeFromYearHigh>-19.48%</PercebtChangeFromYearHigh><LastTradeWithTime>4:01pm - &lt;b&gt;14.88&lt;/b&gt;</LastTradeWithTime><LastTradePriceOnly>14.88</LastTradePriceOnly><HighLimit/><LowLimit/><DaysRange>14.69 - 14.88</DaysRange><DaysRangeRealtime/><FiftydayMovingAverage>14.28</FiftydayMovingAverage><TwoHundreddayMovingAverage>14.74</TwoHundreddayMovingAverage><ChangeFromTwoHundreddayMovingAverage>0.14</ChangeFromTwoHundreddayMovingAverage><PercentChangeFromTwoHundreddayMovingAverage>+0.98%</PercentChangeFromTwoHundreddayMovingAverage><ChangeFromFiftydayMovingAverage>0.60</ChangeFromFiftydayMovingAverage><PercentChangeFromFiftydayMovingAverage>+4.17%</PercentChangeFromFiftydayMovingAverage><Name>Bank of America Corporation Com</Name><Notes/><Open>14.76</Open><PreviousClose>14.70</PreviousClose><PricePaid/><ChangeinPercent>+1.22%</ChangeinPercent><PriceSales>1.99</PriceSales><PriceBook>0.64</PriceBook><ExDividendDate>3/2/2016</ExDividendDate><PERatio>11.70</PERatio><DividendPayDate>3/25/2016</DividendPayDate><PERatioRealtime/><PEGRatio>1.52</PEGRatio><PriceEPSEstimateCurrentYear>11.27</PriceEPSEstimateCurrentYear><PriceEPSEstimateNextYear>9.42</PriceEPSEstimateNextYear><Symbol>BAC</Symbol><SharesOwned/><ShortRatio>0.78</ShortRatio><LastTradeTime>4:01pm</LastTradeTime><TickerTrend/><OneyrTargetPrice>17.37</OneyrTargetPrice><Volume>62561801</Volume><HoldingsValue/><HoldingsValueRealtime/><YearRange>10.99 - 18.48</YearRange><DaysValueChange/><DaysValueChangeRealtime/><StockExchange>NYQ</StockExchange><DividendYield>1.34</DividendYield><PercentChange>+1.22%</PercentChange>
+</quote>
+
+</results>
+
+</query>
+

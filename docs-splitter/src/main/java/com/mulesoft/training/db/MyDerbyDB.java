@@ -47,11 +47,11 @@ public class MyDerbyDB implements InitializingBean {
 
 			// For in-memory JVM db
 			// This only uses derby.jar
-			//Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
+			Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
 			
 			// Network connection
 			// This requires derbyclient.jar or derbynet.jar
-			Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
+			//Class.forName("org.apache.derby.jdbc.ClientDriver").newInstance();
 			conn = DriverManager.getConnection(dbURL);
 			DatabaseMetaData md = conn.getMetaData();
 			ResultSet rs = md.getTables(null, null, "%", null);
@@ -73,11 +73,11 @@ public class MyDerbyDB implements InitializingBean {
 				
 				
 				
-				String createAmericanDerbyDBTable = "CREATE TABLE mystock (name varchar(80) NOT NULL,"
+				String createDerbyDBTable = "CREATE TABLE mystock (name varchar(80) NOT NULL,"
 						+"date varchar(20), "
 						+"bookvalue varchar(120) )";
 				
-				stmt.execute(createAmericanDerbyDBTable);
+				stmt.execute(createDerbyDBTable);
 
 				logger.info("\n^^^^^^FLIGHTS Derby table created");
 				//stmt.executeUpdate("INSERT INTO FLIGHTS(PRICE, DESTINATION, ORIGIN) VALUES (555, 'SFO','YYZ')");
@@ -86,14 +86,19 @@ public class MyDerbyDB implements InitializingBean {
 				//stmt.executeUpdate("INSERT INTO FLIGHTS(PRICE, DESTINATION, ORIGIN) VALUES (999, 'SFO','SQL')");
 
 
-				String insertString = "INSERT INTO mystock("
+				String insertString = "INSERT INTO mystock ("
 						+ "name, date, bookvalue"
 						+ ") VALUES"
-						+ "('JohnLaw','2016-05-31','50.00'),"
-						+ "('WizardOfOz','2016-05-31','80.43')";
+						+ "('IBM','2016-05-31','50.00')";
 				
 				stmt.executeUpdate(insertString);
-				logger.info("\n^^^^^^^^^^^^^mystock table populated with American Airlines flights.");
+				
+				
+				stmt.executeUpdate("INSERT INTO mystock (name, date, bookvalue) VALUES ('APPL', '2016-05-05','502.23')");
+				stmt.executeUpdate("INSERT INTO mystock (name, date, bookvalue) VALUES ('IBM', '2016-05-05','50.55')");
+
+
+				logger.info("\n^^^^^^^^^^^^^mystock table populated with stocks.");
 
 				ResultSet results = stmt.executeQuery("SELECT * FROM mystock");
 				logger.info("\n^^^^^^^^^^^^^SELECT completed");
