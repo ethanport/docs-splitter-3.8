@@ -81,6 +81,9 @@ flowVars.dbLastTradeDate=xpath3('//LastTradeDate');
 flowVars.dbBookValue=xpath3('//BookValue');
 ]]></expression-component>
         <set-variable variableName="insertStatement" value="INSERT INTO mystock(name,date,bookvalue) VALUES('#[flowVars.dbName]','#[flowVars.lastTradeDate]','#[flowVars.dbBookValue]');" doc:name="Variable"/>
+        <db:update config-ref="MyDerbyDBConfig" doc:name="Database">
+            <db:dynamic-query><![CDATA[INSERT INTO mystock (name, date, bookvalue) VALUES ('APPL','2016-05-05','502.23');]]></db:dynamic-query>
+        </db:update>
 		<db:insert config-ref="MyDerbyDBConfig" doc:name="Database">
             <db:template-query-ref name="insert_into_mystock"/>
             <db:in-param name="name" value="#[xpath3('//Name')]"/>

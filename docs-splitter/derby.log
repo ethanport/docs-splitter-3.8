@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Tue May 31 17:58:26 PDT 2016:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0155-0977-fcbf-000019000490 
-on database directory memory:/Users/ethan.port/GitHub/docs-splitter-3.8/docs-splitter/training with class loader org.mule.module.launcher.MuleApplicationClassLoader[docs-splitter]@56601396 
+Wed Jun 01 00:36:36 PDT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0155-0ae4-85c1-000024a30d40 
+on database directory memory:/Users/ethan.port/GitHub/docs-splitter-3.8/docs-splitter/training with class loader org.mule.module.launcher.MuleApplicationClassLoader[docs-splitter]@389111b7 
 Loaded from file:/Users/ethan.port/AnypointStudioWorspaces/2016-03-02-ESBOpsTests/.mule/apps/docs-splitter/lib/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_51-b16

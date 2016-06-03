@@ -60,7 +60,7 @@ public class MyDerbyDB implements InitializingBean {
 
 			while (rs.next()){
 				logger.debug("\n\n^^^^^^^there is next " + rs.getString(3));
-				if(rs.getString(3).equalsIgnoreCase("FLIGHTS")) i=1; //set a marker that this table already exists
+				if(rs.getString(3).equalsIgnoreCase("mystock")) i=1; //set a marker that this table already exists
 			}
 
 			logger.info("&&&& - DB Init - &&&&");
@@ -79,7 +79,7 @@ public class MyDerbyDB implements InitializingBean {
 				
 				stmt.execute(createDerbyDBTable);
 
-				logger.info("\n^^^^^^FLIGHTS Derby table created");
+				logger.info("\n^^^^^^mystock Derby table created");
 				//stmt.executeUpdate("INSERT INTO FLIGHTS(PRICE, DESTINATION, ORIGIN) VALUES (555, 'SFO','YYZ')");
 				//stmt.executeUpdate("INSERT INTO FLIGHTS(PRICE, DESTINATION, ORIGIN) VALUES (450, 'LAX','YYZ')");
 				//stmt.executeUpdate("INSERT INTO FLIGHTS(PRICE, DESTINATION, ORIGIN) VALUES (777, 'SEA','SQL')");
@@ -95,13 +95,13 @@ public class MyDerbyDB implements InitializingBean {
 				
 				
 				stmt.executeUpdate("INSERT INTO mystock (name, date, bookvalue) VALUES ('APPL', '2016-05-05','502.23')");
-				stmt.executeUpdate("INSERT INTO mystock (name, date, bookvalue) VALUES ('IBM', '2016-05-05','50.55')");
+				stmt.executeUpdate("INSERT INTO mystock (name, date, bookvalue) VALUES ('GOOG', '2016-05-05','650.55')");
 
 
 				logger.info("\n^^^^^^^^^^^^^mystock table populated with stocks.");
 
 				ResultSet results = stmt.executeQuery("SELECT * FROM mystock");
-				logger.info("\n^^^^^^^^^^^^^SELECT completed");
+				logger.info("\n^^^^^^^^^^^^^SELECT completed: "+results);
 
 				while (results.next()){
 					logger.debug("\n^^^^^^^^^^^^^"+results.getString("name"));
